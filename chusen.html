@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽選</title>
+</head>
+<body>
+    <script>
+        //配列：名前を保持
+        //配列の長さ：何名？
+        //繰り返し　人数分回る
+            //乱数n番目の人を取り出す
+            //splice 配列からn番目を取り出す
+            //表示
+    const a = ["a","b","c","d","e"];
+    const len = a.length;
+    for(let i=0; i<len; i++){
+        const r = Math.floor(Math.random()*a.length);
+        const v = a.splice(r,1);
+        console.log(v); 
+
+    }
+
+    </script>
+</body>
+</html>

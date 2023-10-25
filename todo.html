@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>配列:todo</h1>
+
+todo<input type="text" id="title">
+<button id="add">add</button>
+<div id="view"></div>
+    
+
+<script>
+    const titles = [];
+//追加イベント　addボタンをクリックしたら配列に追加
+//#viewを空にする　empty();　削除
+//titleのvalueを取得
+//配列にvalueを追加　push関数
+//#viewに表示
+$("#add").on("click",function(){
+    $("#view").empty();
+    const t = $("#title").val();
+    titles.push(t);
+    for(let i=0; i<titles.length; i++){
+        $("#view").prepend('<div class="delete" data-titles="'+i+'">'+titles[i]+'</div>');
+    }
+});
+
+
+//削除イベント
+//中身空に
+//配列から１つ削除
+//配列の数だけlengthを表
+    $("div").on("click","delete",function(){
+    $("#view").empty();
+    titles.splice($(this).attr("data-titles") , 1);
+    for(let i=0; i<titles.length; i++){
+        $("#view").prepend('<div class="delete" data-titles="'+i+'">'+titles[i]+'</div>');
+        }
+    });
+
+
+
+
+
+</script>
+</body>
+</html>

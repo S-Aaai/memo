@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //配列
+        const a = [20,10,30,60,50,90,70,40];
+        //bsort関数
+        function bsort(array){
+            let len = array.length; //配列長さを取得
+            for(let i=0; i<len; i++){ //右側から処理するための大きいループ
+                for(let x=0; x<len-i; x++){
+                    if(array[x] > array[x+1]){
+                        [array[x],array[x+1]] = [array[x+1],array[x]] ;
+                    }
+                }
+            }
+            const ob = {min:array[0],max:array[len-1]};
+            return ob;
+            // return  array;
+        }
+        console.log(bsort(a));
+
+
+
+
+    </script>
+</body>
+</html>

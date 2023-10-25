@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="time">経過時間</h1>
+    <input type="text" id="sec">
+    <button id="start">開始</button>
+    <audio src="sound20.mp3" id="sound"></audio>
+    <script>
+        const time  = document.querySelector("#time");
+        const sec   = document.querySelector("#sec");
+        const start = document.querySelector("#start");
+        const sound = document.querySelector("#sound");
+        let count   = 0;
+        const s     = 1000;
+
+        start.onclick = function(){
+            const set_id = setInterval(() => {
+                count++;
+                time.innerHTML=count;
+                if(count==sec.value){
+                    sound.play();
+                    clearInterval(set_id);
+            }
+        },s); //1000
+    }
+
+
+
+    </script>
+</body>
+</html>
