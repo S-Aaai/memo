@@ -31,6 +31,6 @@
                         }
                         document.querySelector("#search-id").value;
                 searchResult.text = targetData.name + "がログインしました。";
-                window.open('http://127.0.0.1:5500/kadai/index.html', '_blank');
+                window.open('http://127.0.0.1:5500/kadai2/index.html', '_blank');
             }
     

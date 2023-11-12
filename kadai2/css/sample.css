@@ -20,6 +20,9 @@ header {
 
 h1 {
     font-size: 100%;
+    color: #0d21fdab;
+    text-shadow: -1px -2px 3px #808080; 
+
 }
 
 main {
@@ -61,11 +64,13 @@ li {
     display: table-cell;
     /* 定義 */
     cursor: pointer;
-    color: #0d7dfd;
+    color: #0d21fdab;
+    border: 6px inset #ccd223;
+
 }
 
 li:hover {
-    background: #0d7dfd;
+    background: #ccd223;
     color: #fff;
 }
 
@@ -76,6 +81,7 @@ textarea {
     font-size: 80%;
     box-shadow: 3px 3px 3px 3px #555;
     background-color: rgb(241, 239, 239);
+    cursor: pointer;
 }
 
 #key {
@@ -84,6 +90,7 @@ textarea {
     font-size: 80%;
     background-color: #e1efff;
     box-shadow: 3px 3px 3px 3px #555;
+    cursor: pointer;
 }
 
 table {
@@ -104,4 +111,6 @@ td {
     font-size: 16px;
     background-color: rgb(241, 239, 239);
     border-bottom: 1px solid #8dc3f5;
+    color: #0d21fdab;
+
 }
