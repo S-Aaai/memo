@@ -42,7 +42,7 @@ p {
     font-size: 200%;
     text-align: center;
     border-bottom: 1px solid #fff;
-    height: 200px;
+    height: 20px;
 }
 
 ul {
@@ -66,7 +66,6 @@ li {
     cursor: pointer;
     color: #0d21fdab;
     border: 6px inset #ccd223;
-
 }
 
 li:hover {
@@ -112,5 +111,8 @@ td {
     background-color: rgb(241, 239, 239);
     border-bottom: 1px solid #8dc3f5;
     color: #0d21fdab;
+}
 
+.delete2 {
+    font-size: small;
 }
